@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>District Analysis for cluster formation</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <h1>District Score Analysis</h1>
+        <form method="POST">
+            <label for="hs_codes">Enter Four Digit ITC HS Codes (separated by commas):</label><br>
+            <input type="text" id="hs_codes" name="hs_codes"><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if results %}
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Cluster Potential District </th>
+                    <th>Current ECI Score</th>
+                    <th>Gain Expected by forming cluster</th>
+                </tr>
+                {% for result in results %}
+                    <tr>
+                        <td>{{ result.rank }}</td>
+                        <td>{{ result.name }}</td>
+                        <td>{{ result.eci }}</td>
+                        <td>{{ result.gain }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </body>
+</html>
