@@ -22,7 +22,7 @@ def index():
         
         
         # Let's assume you have a function that returns a list of dicts, 
-        # with each dict having 'name', 'eci' and 'gain' keys.
+        # with each dict having 'rank', 'name', 'eci' and 'gain' keys.
         
         results = your_calculations(filtered_df)
 

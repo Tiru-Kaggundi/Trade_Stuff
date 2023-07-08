@@ -1,0 +1,32 @@
+Instructions: 
+Folder Structure: 
+/myapp
+    /static
+        style.css
+    /templates
+        input.html
+        output.html
+    app.py
+    districts.xlsx
+    requirements.txt
+    instructions.txt (this file)
+    venv/
+
+Make a Virtual environment first: 
+How to:
+- Go to the folder (cluster_app folder in my case)
+- Create a new virtual environment using: python3 -m venv venv
+- Then activate on Mac: source venv/bin/activate
+- If windows, use this to activate: .\venv\Scripts\activate
+- Use pip install -r requirements.txt
+- after work is done deactivate using deactivate
+
+
+how to start the server: 
+After starting virtual env use this command: 
+python app.py
+It will give something like: 
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+Go to a browser and open this path
+ctrl + c will stop this server. 
